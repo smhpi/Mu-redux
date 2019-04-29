@@ -1,17 +1,30 @@
 import C from "./constants";
-import { goal } from "./store/reducers";
+import { allSkiDays } from "./store/reducers";
 
-const state = 10;
+const state = [
+  {
+    resort: "Breezwood",
+    date: "2016-12-15",
+    powder: true,
+    backcountry: false
+  },
+  {
+    resort: "Boreal",
+    date: "2016-12-6",
+    powder: false,
+    backcountry: false
+  }
+];
 
 const action = {
-  type: C.SET_GOAL,
-  payload: 15
+  type: C.REMOVE_DAY,
+  payload: "2016-12-6"
 };
 
-const nextState = goal(state, action);
+const nextState = allSkiDays(state, action);
 
 console.log(`
-    initial goal: ${state}
+    initial state: ${JSON.stringify(state)}
     action: ${JSON.stringify(action)}
-    new goal: ${nextState}
+    new state: ${JSON.stringify(nextState)}
 `);
