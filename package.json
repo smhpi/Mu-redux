@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/babel-node ./src/index.js",
+    "challenge-a": "babel-node ./src/challenges/FETCH_RESORT_NAMES.js",
+    "challenge-b": "babel-node ./src/challenges/CANCEL_FETCHING.js",
+    "challenge-c": "babel-node ./src/challenges/CLEAR_SUGGESTIONS.js",
+    "challenge-d": "babel-node ./src/challenges/CHANGE_SUGGESTIONS.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,6 +16,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "expect": "^1.20.2"
   }
 }
